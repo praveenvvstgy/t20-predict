@@ -1,0 +1,352 @@
+.tLogoXL.tLogoXL {
+  display: inline-block;
+  background-image: url("../images/flags-xl-sprite.png");
+  background-repeat: no-repeat;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .tLogoXL.tLogoXL {
+    background-image: url("../images/flags-xl-sprite@x2.png");
+    background-size: 1204px 1200px;
+  }
+}
+.tLogoXL.tLogoXL.AFG-alt {
+  background-position: -172px 0px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.AFG {
+  background-position: -516px -720px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.AFGw-alt {
+  background-position: 0px -120px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.AFGw {
+  background-position: -172px -120px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.AUS-alt {
+  background-position: -344px 0px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.AUS {
+  background-position: -344px -120px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.AUSw-alt {
+  background-position: 0px -240px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.AUSw {
+  background-position: -172px -240px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.BAN-alt {
+  background-position: -344px -240px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.BAN {
+  background-position: 0px -360px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.BANw-alt {
+  background-position: -172px -360px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.BANw {
+  background-position: -344px -360px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.ENG-alt {
+  background-position: -516px 0px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.ENG {
+  background-position: -516px -120px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.ENGw-alt {
+  background-position: -516px -240px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.ENGw {
+  background-position: -516px -360px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.HK-alt {
+  background-position: 0px -480px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.HK {
+  background-position: -172px -480px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.HKw-alt {
+  background-position: -344px -480px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.HKw {
+  background-position: -516px -480px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.IND-alt {
+  background-position: -688px 0px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.IND {
+  background-position: -688px -120px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.INDw-alt {
+  background-position: -688px -240px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.INDw {
+  background-position: -688px -360px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.IRE-alt {
+  background-position: -688px -480px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.IRE {
+  background-position: 0px -600px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.IREw-alt {
+  background-position: -172px -600px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.IREw {
+  background-position: -344px -600px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.NET-alt {
+  background-position: -516px -600px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.NET {
+  background-position: -688px -600px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.NETw-alt {
+  background-position: 0px -720px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.NETw {
+  background-position: -172px -720px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.NZ-alt {
+  background-position: -344px -720px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.NZ {
+  background-position: 0px 0px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.NZw-alt {
+  background-position: -688px -720px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.NZw {
+  background-position: -860px 0px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.OMA-alt {
+  background-position: -860px -120px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.OMA {
+  background-position: -860px -240px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.OMAw-alt {
+  background-position: -860px -360px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.OMAw {
+  background-position: -860px -480px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.PAK-alt {
+  background-position: -860px -600px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.PAK {
+  background-position: -860px -720px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.PAKw-alt {
+  background-position: 0px -840px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.PAKw {
+  background-position: -172px -840px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.SA-alt {
+  background-position: -344px -840px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.SA {
+  background-position: -516px -840px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.SAw-alt {
+  background-position: -688px -840px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.SAw {
+  background-position: -860px -840px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.SCO-alt {
+  background-position: -1032px 0px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.SCO {
+  background-position: -1032px -120px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.SCOw-alt {
+  background-position: -1032px -240px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.SCOw {
+  background-position: -1032px -360px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.SL-alt {
+  background-position: -1032px -480px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.SL {
+  background-position: -1032px -600px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.SLw-alt {
+  background-position: -1032px -720px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.SLw {
+  background-position: -1032px -840px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.WI-alt {
+  background-position: 0px -960px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.WI {
+  background-position: -172px -960px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.WIw-alt {
+  background-position: -344px -960px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.WIw {
+  background-position: -516px -960px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.ZIM-alt {
+  background-position: -688px -960px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.ZIM {
+  background-position: -860px -960px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.ZIMw-alt {
+  background-position: -1032px -960px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.ZIMw {
+  background-position: 0px -1080px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.default-alt {
+  background-position: -172px -1080px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL.tLogoXL.default {
+  background-position: -344px -1080px;
+  width: 172px;
+  height: 120px;
+}
+
+.tLogoXL {
+  background-position: -344px -1080px;
+  width: 172px;
+  height: 120px;
+}
+.tLogoXL[class*="-alt"] {
+  background-position: -172px -1080px;
+  width: 172px;
+  height: 120px;
+}

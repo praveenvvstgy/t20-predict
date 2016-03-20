@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Register | T20 Predict</title>
+ 
+    
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link href="../static/css/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/css/signup.css" rel="stylesheet">
+    
+  </head>
+ 
+  <body>
+ 
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="/">Home</a></li>
+            <li role="presentation"><a href="/showSignin">Sign In</a></li>
+            <li role="presentation" class="active"><a href="#">Sign Up</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">T20 Predict</h3>
+      </div>
+ 
+      <div class="jumbotron">
+        <h1>Register</h1>
+        <p class="bg-success" id="success"></p>
+        <p class="bg-danger" id="error"></p>
+        <form class="form-signin">
+        <label for="inputName" class="sr-only">Name</label>
+        <input type="name" name="inputName" id="inputName" class="form-control" placeholder="Name" required autofocus>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
+         
+        <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="button">Sign up</button>
+      </form>
+      </div>
+ 
+       
+ 
+      <footer class="footer">
+        <p>Mobile BI Team</p>
+      </footer>
+ 
+    </div>
+    <script src="../static/js/jquery-1.12.2.min.js"></script>
+    <script>
+      $(function(){
+        $('#btnSignUp').click(function(){
+          $("#success").html("")
+          $("#error").html("")
+          $.ajax({
+            url: '/signUp',
+            data: $('form').serialize(),
+            type: 'POST',
+            success: function(reponse){
+              reponse = JSON.parse(reponse)
+              if (reponse["success"]) {
+                $("#success").html(reponse["html"])
+              } else {
+                $("#error").html(reponse["html"])
+              }
+              
+            },
+            error: function(reponse) {
+              reponse = JSON.parse(reponse)
+              $("#error").html(reponse["html"])
+            }
+          })
+        })
+      })
+    </script>
+  </body>
+</html>
