@@ -148,14 +148,64 @@ def getTeam(id):
 		con.close()
 
 @app.route('/todaysMatch')
-def todaysMatch():
+def todaysMatch(success = '', error = ''):
 	if session.get('user'):
 		todayMatch = getTodaysMatch()
 		team1 = getTeam(todayMatch[1])
 		team2 = getTeam(todayMatch[2])
-		return render_template('todays.html', team1 = team1, team2 = team2)
+		if getPrediction(session.get('user'), todayMatch[0]):
+			alreadyPredicted = True
+		else:
+			alreadyPredicted = False
+		print alreadyPredicted
+		return render_template('todays.html', team1 = team1, team2 = team2, match = todayMatch, success = success, error = error, alreadyPredicted = alreadyPredicted)
 	else:
 		return render_template('signin.html', error = 'Please Login')
+
+@app.route('/submitPrediction', methods = ['POST'])
+def submitPrediction():
+	_user = session.get('user')
+	_match = request.form['matchid']
+	_winner = request.form['winningTeam']
+	_toss = request.form['winningToss']
+	if getPrediction(session.get('user'), _match):
+		return todaysMatch(error = 'You have already predicted')
+	else:
+		if _winner and _toss:
+			try:
+				con = mysql.connect()
+				cursor = con.cursor()
+				sql = "INSERT INTO predictions (`user`, `match`, `winner`, `toss`) VALUES ({},{},{},{})".format(_user, _match, _winner, _toss)
+				cursor.execute(sql)
+				data = cursor.fetchone()
+				con.commit()
+				return todaysMatch(success = 'Prediction successfully saved')
+			except Exception, e:
+				return todaysMatch(error = str(e))
+			finally:
+				cursor.close()
+				con.close()
+		else:
+			return todaysMatch(error = 'Select the prediction for both toss and match.')
+
+def getPrediction(user, match):
+	try:
+		con = mysql.connect()
+		cursor = con.cursor()
+		sql = "SELECT * FROM predictions WHERE `user` = {} AND `match` = {}".format(user, match)
+		cursor.execute(sql)
+		data = cursor.fetchone()
+		print len(data)
+		if data:
+			return data
+		else:
+			return None
+	except Exception, e:
+		return None
+	finally:
+		cursor.close()
+		con.close()
+	return None
 
 
 if __name__ == "__main__":

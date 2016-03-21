@@ -20,7 +20,7 @@
         <div class="header">
             <nav>
                 <ul class="nav nav-pills pull-right">
-                    <li role="presentation" class="active"><a href="#">Home</a>
+                    <li role="presentation" class="active"><a href="/">Home</a>
                     </li>
                     <li role="presentation"><a href="/logout">Logout</a>
                     </li>
@@ -50,25 +50,40 @@
         </div>
 
         <div class="row">
-                <form action="/submitPrediction" method="POST">
-                    <div class="form-group">
-                        <label for="winningToss">Who will win the toss?</label>
-                        <select required="required" class="form-control" name="winningToss" id="winningToss">
-                            <option value="">Select Team</option>
-                            <option value="{{ team1[0] }}">{{ team1[1] }}</option>
-                            <option value="{{ team2[0] }}">{{ team2[1] }}</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="winningTeam">Who will win the match?</label>
-                        <select required="required" class="form-control" name="winningTeam" id="winningTeam">
-                            <option value="">Select Team</option>
-                            <option value="{{ team1[0] }}">{{ team1[1] }}</option>
-                            <option value="{{ team2[0] }}">{{ team2[1] }}</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
+            <div>
+                {% if error %}
+                <p class="bg-danger" id="error">{{ error }}</p>
+                {% endif %}
+                {% if success %}
+                <p class="bg-success" id="success">{{ success }}</p>
+                {% endif %}
+            </div>
+            {% if alreadyPredicted %}
+            <div>
+                <h2>You have already predicted, All the best</h2>
+            </div>
+            {% else %}
+            <form action="/submitPrediction" method="POST">
+                <div class="form-group">
+                    <label for="winningToss">Who will win the toss?</label>
+                    <select required="required" class="form-control" name="winningToss" id="winningToss">
+                        <option value="">Select Team</option>
+                        <option value="{{ team1[0] }}">{{ team1[1] }}</option>
+                        <option value="{{ team2[0] }}">{{ team2[1] }}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="winningTeam">Who will win the match?</label>
+                    <select required="required" class="form-control" name="winningTeam" id="winningTeam">
+                        <option value="">Select Team</option>
+                        <option value="{{ team1[0] }}">{{ team1[1] }}</option>
+                        <option value="{{ team2[0] }}">{{ team2[1] }}</option>
+                    </select>
+                </div>
+                <input type="hidden" name="matchid" value="{{ match[0] }}">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            {% endif %}
         </div>
  
         <footer class="footer">
